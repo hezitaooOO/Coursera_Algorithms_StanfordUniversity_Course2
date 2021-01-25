@@ -1,21 +1,10 @@
-
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.*;
 
-/*
- * This class represents a graph that has vertex from ID = 1 to ID = n.
- * A DFS-based algorithm (Kosaraju's Two-Pass Algorithm)
- * is implemented to find the strongly connected components (SCC).
- *
- * Algorithm time complexity: O(m+n) where n is the number of vertices and m is the number of edges
- *
- * @author: Zitao He
- * */
 /**
- * Project: Coursera Algorithms by Standford University: Graph Search, Shortest Paths, and Data Structures
+ * Project: Coursera Algorithms by Standford University: Graph Search, Shortest Paths, and Data Structures.
  * Description: Week 2 Programming Assignment.
  *              This class represents a graph that has vertex from ID = 1 to ID = n.
  *              A DFS-based algorithm (Kosaraju's Two-Pass Algorithm)
