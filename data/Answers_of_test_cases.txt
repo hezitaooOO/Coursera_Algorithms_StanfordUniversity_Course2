@@ -1,0 +1,6 @@
+SCC-test1.txt	Answer: 3,3,3,0,0
+SCC-test2.txt	Answer: 3,3,2,0,0
+SCC-test3.txt	Answer: 3,3,1,1,0
+SCC-test4.txt	Answer: 7,1,0,0,0
+SCC-test5.txt	Answer: 6,3,2,1,0
+
