@@ -37,12 +37,12 @@ public class StreamMedianFinder {
      * Constructor reads in data and build integer array numbers
      * @param streamSize the size of the stream (number of distinct integers in data file)
      * @param inputFileName the file name of data file
-     * @throws FileNotFoundException
+     * @throws FileNotFoundException throws exception when file is not found
      */
     public StreamMedianFinder(int streamSize, String inputFileName) throws FileNotFoundException{
         numbers = new int[streamSize];
-        heapLow = new ArrayList<Integer>();
-        heapHigh = new ArrayList<Integer>();
+        heapLow = new ArrayList<>();
+        heapHigh = new ArrayList<>();
         Scanner fileScanner;
         int index = 0;
 
@@ -53,7 +53,7 @@ public class StreamMedianFinder {
             throw new FileNotFoundException("Error: Input file is not found.");
         }
         while(fileScanner.hasNextLine()){
-            numbers[index++] = Integer.valueOf(fileScanner.nextLine());
+            numbers[index++] = Integer.parseInt(fileScanner.nextLine());
         }
         System.out.println(Arrays.toString(numbers));
     }
@@ -128,7 +128,6 @@ public class StreamMedianFinder {
         int min = heap.get(0);
         Collections.swap(heap, 0, heap.size()-1);
         heap.remove(heap.size()-1);
-        int numberIdx = 0;
         minHeapPercolateDownRoot(heap, 0);
         return min;
     }
@@ -142,7 +141,6 @@ public class StreamMedianFinder {
         int max = heap.get(0);
         Collections.swap(heap, 0, heap.size()-1);
         heap.remove(heap.size()-1);
-        int numberIdx = 0;
         maxHeapPercolateDownRoot(heap, 0);
         return max;
     }
